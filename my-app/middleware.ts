@@ -29,6 +29,8 @@ function getLocale(request: NextRequest): string | undefined {
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
+  if(['next.svg', 'vercel.svg']) return
+
   // Check if there is any supported locale in the pathname
   const pathnameIsMissingLocale = i18n.detailLocales.every(
     (locale) =>
@@ -52,6 +54,7 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Matcher ignoring `/_next/` and `/api/`
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+  // Matcher ignoring `/_next/`, `/public/` and `/api/`
+  // Next.js always considers /public as /public/index. Therefore, a matcher of /public/:path will match.
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico|public/:path*).*)"],
 };
