@@ -11,7 +11,7 @@
 export const i18n: I18NConfigType = {
   defaultLocale: "en",
   detailLocales: [
-      { code: "en", fullname: "English" },
-      { code: "zh-TW", fullname: "繁體中文" },
-    ],
-}
+    { code: "en", fullname: "English" },
+    { code: "zh-TW", fullname: "繁體中文" },
+  ],
+};

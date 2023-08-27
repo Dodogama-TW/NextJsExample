@@ -29,7 +29,7 @@ export default function RootLayout({
             id="sidebar"
           >
             <Sidebar />
-            <LocaleSwitcher/>
+            <LocaleSwitcher />
           </div>
           <div className="flex flex-none w-4/5 h-full" id="content">
             {children}

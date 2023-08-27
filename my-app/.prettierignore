@@ -6,3 +6,8 @@ coverage
 **/.svn
 **/.hg
 **/node_modules
+!*.ts
+!*.tsx
+!*.js
+!*.jsx
+!*/

@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "fix-prettier": "prettier . '**/*.{js,ts,tsx,jsx}' --write"
+    "fix-prettier": "prettier . --write"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.4.0",
